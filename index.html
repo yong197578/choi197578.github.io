@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Miniport by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.box-image {
+				object-fit: fill;
+				width: 100%;
+				height: 300px;
+			}
+			.box-video {
+				width: 100%;
+				height: 400px;
+			}
+			/* Modal styles */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 9999;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.7);
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+			}
+
+			.modal video {
+				display: block;
+				margin: auto;
+				max-width: 90%;
+				max-height: 90vh;
+			}
+
+			.modal .close {
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				font-size: 30px;
+				font-weight: bold;
+				cursor: pointer;
+
+			}
+
+			.modal .modal-close-button {
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+				padding: 10px 20px;
+				background-color: #0062DB;
+				color: #fff;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+				z-index: 9999;
+			}
+
+
+
+			/* Style for the video thumbnail */
+			.box img {
+				width: 100%;
+				height: auto;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Introduction</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/Yong%202.jpg" alt="" /></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Hi. I'm <strong>Yong Choi</strong>.</h1>
+							</header>
+							<p>Hello! Welcome to my page! I'm thrilled you've found your way to my portfolio. Ever since I wrote my first line of code, I've been completely fascinated by the possibilities that technology opens up. Whether it's building interactive web applications or developing powerful algorithms, I'm always ready for the challenge. Take a look around to see projects I've poured my heart into.</p>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Portfolio -->
+			<article id="portfolio" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Here’s some stuff I made recently.</h2>
+						<p>Please, feel free to explore my recent works and gain insight into my skills, programming style, and the passion that drives my work. Whether you're a potential employer, a fellow programmer, or simply interested in learning more about what I do, I'm glad you're here.</p>
+					</header>
+					<div class="row" >
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2" style="padding: 0 0 0 0;">
+								<a href="#portfolio" class="video featured" onclick="openModal('images/coffee.mov')">
+									<video class="box-video" controls>
+										<source src="images/coffee.mov" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+								</a>
+								<h3><a href="https://github.com/Choi-Gutierrez-Coffee-Project/coffee-project">Coffee Project</a></h3>
+								<p>Search and Add function</p>
+							</article>
+						</div>
+
+						<!-- Modal -->
+						<div id="videoModal1" class="modal">
+							<span class="close" onclick="closeModal()">&times;</span>
+							<video id="modalVideo2" controls>
+								<source src="images/coffee.mov" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<button class="modal-close-button" onclick="closeModal()">Close</button>
+
+						</div>
+
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2" style="padding: 0 0 0 0;">
+								<a href="#portfolio" class="video featured" onclick="openModal('images/movie.mov')"><video class="box-video" controls> <source src="images/movie.mov" type="video/mp4">Your browser does not support the video tag.</video></a>
+									<h3><a href="https://github.com/Yong-Perez-Saunders-Movie-Project/movies-application/tree/main"> Movie Application</a></h3>
+								<p>RESTful and CRUD function</p>
+							</article>
+						</div>
+						<div id="videoModal2" class="modal">
+							<span class="close" onclick="closeModal()">&times;</span>
+							<video id="modalVideo" controls>
+								<source src="images/movie.mov" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<button class="modal-close-button" onclick="closeModal()">Close</button>
+
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2" style="padding: 0 0 0 0;">
+								<a href="#portfolio" class="video featured" onclick="openModal('images/weather.mov')"><video class="box-video" controls> <source src="images/weather.mov" type="video/mp4">Your browser does not support the video tag.</video></a>
+								<h3><a href="https://github.com/yong197578/codeup-web-exercises/blob/main/weather_map_ver2.html">Weather Map</a></h3>
+								<p>Using API to find weather around area</p>
+							</article>
+						</div>
+						<div id="videoModal3" class="modal">
+							<span class="close" onclick="closeModal()">&times;</span>
+							<video id="modalVideo1" controls>
+								<source src="images/weather.mov" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<button class="modal-close-button" onclick="closeModal()">Close</button>
+
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://github.com/yong197578/codeup-web-exercises/tree/main/50%20Mini%20Project%20(Offtime%20projects)" class="image featured"><img class="box-image" src="images/github.png" alt="github logo" style="object-fit: fill;" /></a>
+								<h3><a href="https://github.com/yong197578/codeup-web-exercises/tree/main/50%20Mini%20Project%20(Offtime%20projects)">50 Mini Projects</a></h3>
+								<p>Pure HTML, CSS, JavaScript mini projects.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://github.com/grant-choi-farias-adlister/ayd-adlister" class="image featured"><img src="images/github.png" alt="github logo" /></a>
+								<h3><a href="https://github.com/grant-choi-farias-adlister/ayd-adlister">Adlister</a></h3>
+								<p>Using Java to create CRUD function.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://github.com/SYAM-Auto-Connect/Auto-Connect" class="image featured"><img src="images/github.png" alt="github logo" /></a>
+								<h3><a href="https://github.com/SYAM-Auto-Connect/Auto-Connect">Auto-Connect</a></h3>
+								<p>My Capstone Project using Spring MVC</p>
+							</article>
+						</div>
+					</div>
+					<footer>
+						<p>If my work resonates with you and you're interested in collaborating or learning more, I'd love to hear from you.</p>
+						<a href="#contact" class="button large scrolly">Connect With Me</a>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Contact -->
+			<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Let's Start a Conversation</h2>
+						<p>Your inquiries are welcome. Feel free to reach out at your earliest convenience.</p>
+					</header>
+					<div class="row">
+						<div class="col-12">
+							<form method="post" action="send-email.php">
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<input type="text" name="name" id="name" placeholder="Name" required />
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="email" name="email" id="email" placeholder="Email" required />
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Subject" required />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message" required></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="reset" value="Clear Form" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-12">
+							<hr />
+							<h3>Find me on ...</h3>
+							<ul class="social">
+								<li><a href="https://www.linkedin.com/in/yong-choi-7b550232/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/yong197578" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							</ul>
+							<hr />
+						</div>
+					</div>
+			</article>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	<script>
+		function openModal(videoSrc) {
+			let modal = document.getElementById("videoModal");
+			let video = document.getElementById("modalVideo");
+			video.src = videoSrc;
+			modal.style.display = "block";
+		}
+
+		function closeModal() {
+			let modal = document.getElementById("videoModal");
+			let video = document.getElementById("modalVideo");
+			video.pause();
+			video.currentTime = 0;
+			modal.style.display = "none";
+		}
+	</script>
+	</body>
+</html>
