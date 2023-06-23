@@ -112,7 +112,7 @@
 					<div class="row" >
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2" style="padding: 0 0 0 0;">
-								<a href="#portfolio" class="video featured" onclick="openModal('images/coffee.mov')">
+								<a href="#portfolio" class="video featured" onclick="openModal('images/coffee.mov', 'videoModal', 'modalVideo')">
 									<video class="box-video" controls>
 										<source src="images/coffee.mov" type="video/mp4">
 										Your browser does not support the video tag.
@@ -124,46 +124,47 @@
 						</div>
 
 						<!-- Modal -->
-						<div id="videoModal1" class="modal">
-							<span class="close" onclick="closeModal()">&times;</span>
-							<video id="modalVideo2" controls>
+						<div id="videoModal" class="modal">
+							<span class="close" onclick="closeModal('videoModal', 'modalVideo')">&times;</span>
+							<video id="modalVideo" controls>
 								<source src="images/coffee.mov" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
-							<button class="modal-close-button" onclick="closeModal()">Close</button>
+							<button class="modal-close-button" onclick="closeModal('videoModal', 'modalVideo')">Close</button>
 
 						</div>
 
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2" style="padding: 0 0 0 0;">
-								<a href="#portfolio" class="video featured" onclick="openModal('images/movie.mov')"><video class="box-video" controls> <source src="images/movie.mov" type="video/mp4">Your browser does not support the video tag.</video></a>
+								<a href="#portfolio" class="video featured" onclick="openModal('images/movie.mov', 'videoModal1', 'modalVideo1')"><video class="box-video" controls> <source src="images/movie.mov" type="video/mp4">Your browser does not support the video tag.</video></a>
 									<h3><a href="https://github.com/Yong-Perez-Saunders-Movie-Project/movies-application/tree/main"> Movie Application</a></h3>
 								<p>RESTful and CRUD function</p>
 							</article>
 						</div>
-						<div id="videoModal2" class="modal">
-							<span class="close" onclick="closeModal()">&times;</span>
-							<video id="modalVideo" controls>
+						<!-- Modal -->
+						<div id="videoModal1" class="modal">
+							<span class="close" onclick="closeModal('videoModal1', 'modalVideo1')">&times;</span>
+							<video id="modalVideo1" controls>
 								<source src="images/movie.mov" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
-							<button class="modal-close-button" onclick="closeModal()">Close</button>
+							<button class="modal-close-button" onclick="closeModal('videoModal1', 'modalVideo1')">Close</button>
 
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2" style="padding: 0 0 0 0;">
-								<a href="#portfolio" class="video featured" onclick="openModal('images/weather.mov')"><video class="box-video" controls> <source src="images/weather.mov" type="video/mp4">Your browser does not support the video tag.</video></a>
+								<a href="#portfolio" class="video featured" onclick="openModal('images/weather.mov', 'videoModal2', 'modalVideo2')"><video class="box-video" controls> <source src="images/weather.mov" type="video/mp4">Your browser does not support the video tag.</video></a>
 								<h3><a href="https://github.com/yong197578/codeup-web-exercises/blob/main/weather_map_ver2.html">Weather Map</a></h3>
 								<p>Using API to find weather around area</p>
 							</article>
 						</div>
-						<div id="videoModal3" class="modal">
-							<span class="close" onclick="closeModal()">&times;</span>
-							<video id="modalVideo1" controls>
+						<div id="videoModal2" class="modal">
+							<span class="close" onclick="closeModal('videoModal2', 'modalVideo2')">&times;</span>
+							<video id="modalVideo2" controls>
 								<source src="images/weather.mov" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
-							<button class="modal-close-button" onclick="closeModal()">Close</button>
+							<button class="modal-close-button" onclick="closeModal('videoModal2', 'modalVideo2')">Close</button>
 
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
@@ -248,21 +249,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-	<script>
-		function openModal(videoSrc) {
-			let modal = document.getElementById("videoModal");
-			let video = document.getElementById("modalVideo");
-			video.src = videoSrc;
-			modal.style.display = "block";
-		}
+		<script>
+			function openModal(videoSrc, modalId, videoId) {
+				let modal = document.getElementById(modalId);
+				let video = document.getElementById(videoId);
+				video.src = videoSrc;
+				modal.style.display = "block";
+			}
 
-		function closeModal() {
-			let modal = document.getElementById("videoModal");
-			let video = document.getElementById("modalVideo");
-			video.pause();
-			video.currentTime = 0;
-			modal.style.display = "none";
-		}
-	</script>
+			function closeModal(modalId, videoId) {
+				let modal = document.getElementById(modalId);
+				let video = document.getElementById(videoId);
+				video.pause();
+				video.currentTime = 0;
+				modal.style.display = "none";
+			}
+		</script>
+
 	</body>
 </html>
