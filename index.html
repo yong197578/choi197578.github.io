@@ -64,13 +64,15 @@
 				z-index: 9999;
 			}
 
-
-
-			/* Style for the video thumbnail */
 			.box img {
 				width: 100%;
 				height: auto;
 				cursor: pointer;
+			}
+			@media screen and (max-width: 768px) {
+				.head {
+					margin-top: 80px;
+				}
 			}
 		</style>
 	</head>
@@ -92,8 +94,8 @@
 						<div class="col-4 col-5-large col-12-medium">
 							<span class="image fit"><img src="images/Yong%202.jpg" alt="" /></span>
 						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
+						<div class="col-8 col-7-large col-12-medium head">
+							<header >
 								<h1>Hi. I'm <strong>Yong Choi</strong>.</h1>
 							</header>
 							<p>Hello! Welcome to my page! I'm thrilled you've found your way to my portfolio. Ever since I wrote my first line of code, I've been completely fascinated by the possibilities that technology opens up. Whether it's building interactive web applications or developing powerful algorithms, I'm always ready for the challenge. Take a look around to see projects I've poured my heart into.</p>
