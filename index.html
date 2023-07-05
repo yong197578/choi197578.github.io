@@ -11,6 +11,7 @@
 				object-fit: fill;
 				width: 100%;
 				height: 300px;
+
 			}
 			.box-video {
 				width: 100%;
@@ -63,17 +64,29 @@
 				cursor: pointer;
 				z-index: 9999;
 			}
-
-			.box img {
-				width: 100%;
-				height: auto;
-				cursor: pointer;
+			.box-image{
+				transition: transform 0.3s ease;
+			}
+			.box-image:hover  {
+				transform: scale(0.8);
 			}
 			@media screen and (max-width: 768px) {
 				.head {
 					margin-top: 80px;
 				}
 			}
+			.fa-linkedin-in::before, .fa-github::before {
+				font-size: 3rem !important;
+			}
+			.social-icon {
+				display: inline-block;
+				padding: 30px;
+			}
+			.social-icon a {
+				display: inline-block;
+				text-decoration: none;
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -98,7 +111,7 @@
 							<header >
 								<h1>Hi. I'm <strong>Yong Choi</strong>.</h1>
 							</header>
-							<p>Hello! Welcome to my page! I'm thrilled you've found your way to my portfolio. Ever since I wrote my first line of code, I've been completely fascinated by the possibilities that technology opens up. Whether it's building interactive web applications or developing powerful algorithms, I'm always ready for the challenge. Take a look around to see projects I've poured my heart into.</p>
+							<p>Hello! Welcome to my page! Since the moment I wrote my first line of code, I've been absolutely hooked on the amazing things that technology can do. Whether it's creating awesome web applications or coming up with clever algorithms, I'm always up for the challenge. Feel free to take your time and check out the projects I've poured my heart into.</p>
 						</div>
 					</div>
 				</div>
@@ -173,19 +186,19 @@
 							<article class="box style2">
 								<a href="https://github.com/yong197578/codeup-web-exercises/tree/main/50%20Mini%20Project%20(Offtime%20projects)" class="image featured"><img class="box-image" src="images/github.png" alt="github logo" style="object-fit: fill;" /></a>
 								<h3><a href="https://github.com/yong197578/codeup-web-exercises/tree/main/50%20Mini%20Project%20(Offtime%20projects)">50 Mini Projects</a></h3>
-								<p>Pure HTML, CSS, JavaScript mini projects.</p>
+								<p>Pure HTML, CSS, JavaScript.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="https://github.com/grant-choi-farias-adlister/ayd-adlister" class="image featured"><img src="images/github.png" alt="github logo" /></a>
+								<a href="https://github.com/grant-choi-farias-adlister/ayd-adlister" class="image featured"><img class="box-image" src="images/github.png" alt="github logo" /></a>
 								<h3><a href="https://github.com/grant-choi-farias-adlister/ayd-adlister">Adlister</a></h3>
 								<p>Using Java to create CRUD function.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="https://github.com/SYAM-Auto-Connect/Auto-Connect" class="image featured"><img src="images/github.png" alt="github logo" /></a>
+								<a href="https://github.com/SYAM-Auto-Connect/Auto-Connect" class="image featured"><img class="box-image" src="images/github.png" alt="github logo" /></a>
 								<h3><a href="https://github.com/SYAM-Auto-Connect/Auto-Connect">Auto-Connect</a></h3>
 								<p>My Capstone Project using Spring MVC</p>
 							</article>
@@ -203,7 +216,7 @@
 				<div class="container medium">
 					<header>
 						<h2>Let's Start a Conversation</h2>
-						<p>Your inquiries are welcome. Feel free to reach out at your earliest convenience.</p>
+						<p>Feel Free to Reach out to me anytime! Let's connect</p>
 					</header>
 					<div class="row">
 						<div class="col-12">
@@ -212,8 +225,8 @@
 									<div class="col-6 col-12-small">
 										<input type="text" name="name" id="name" placeholder="Name" required />
 									</div>
-									<div class="col-6 col-12-small">
-										<input type="email" name="email" id="email" placeholder="Email" required />
+									<div class="col-6 col-12-small" >
+										<input type="email" name="email" id="email" placeholder="Email" style="background-color: #282828; color: #fff; border-style: none;" required />
 									</div>
 									<div class="col-12">
 										<input type="text" name="subject" id="subject" placeholder="Subject" required />
@@ -235,9 +248,9 @@
 					<div class="col-12">
 							<hr />
 							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="https://www.linkedin.com/in/yong-choi-7b550232/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/yong197578" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<ul class="social" >
+								<li><div class="social-icon"><a href="https://www.linkedin.com/in/yong-choi-7b550232/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></div></li>
+								<li><div class="social-icon"><a href="https://github.com/yong197578" class="icon brands fa-github"><span class="label">Github</span></a></div></li>
 							</ul>
 							<hr />
 						</div>
@@ -266,6 +279,8 @@
 				video.currentTime = 0;
 				modal.style.display = "none";
 			}
+
+
 		</script>
 
 	</body>
